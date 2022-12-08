@@ -8,7 +8,6 @@ fn main() {
     }
 }
 
-// const INPUT: &str = include_str!("input.txt");
 const INPUT: &str = include_str!("input.txt");
 
 mod sixteen {
@@ -398,6 +397,16 @@ mod sixteen {
             dbg!(&pkt);
             assert_eq!(pkt.ver, 1);
             assert_eq!(pkt.opcode, 6);
+        }
+
+        #[test]
+        fn real_part1() {
+            assert_eq!(part1(crate::INPUT), 969);
+        }
+
+        #[test]
+        fn real_part2() {
+            assert_eq!(part2(crate::INPUT), 124921618408u64);
         }
     }
 }
